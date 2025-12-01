@@ -3,6 +3,10 @@ import { ModuleWithProviders } from "@angular/core";
 import { InicioComponent } from "./components/inicio/inicio.component";
 import { LayoutContentComponent } from "../../../componentes/src/lib/components/layout-content-component/layout-content.component";
 import { TestComponent } from "./components/test/test.component";
+import { RecursosComponent } from "./components/recursos/recursos.component";
+import { MapaComponent } from "./components/mapa/mapa.component";
+import { ComunidadComponent } from "./components/comunidad/comunidad.component";
+import { DenunciaComponent } from "./components/denuncia/denuncia.component";
 
 const MenusRoutes: Routes = [
     {
@@ -11,6 +15,10 @@ const MenusRoutes: Routes = [
         children: [
             { path: "inicio", component: InicioComponent },
             { path: "test", component: TestComponent },
+            { path: "recursos", component: RecursosComponent },
+            { path: "mapa", component: MapaComponent },
+            { path: "comunidad", component: ComunidadComponent },
+            { path: "denuncia", component: DenunciaComponent },
             { path: '', redirectTo: 'inicio', pathMatch: 'full' },
         ]
     },
