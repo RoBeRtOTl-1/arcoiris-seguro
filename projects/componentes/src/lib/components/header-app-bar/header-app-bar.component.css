@@ -1,8 +1,8 @@
 .header-bar {
     display: flex;
     width: 100%;
-    height: 50px;
-    background-color: #B6F0D3;
+    height: 60px;
+    background-color: #d7f7e6;
     justify-content:start;
     align-items: center;
     margin: 0;
@@ -11,14 +11,17 @@
 
 .icon-image {
     width: 40px;
-    height: 40px;
+    height: 44px;
     margin-right: 15px;
-    align-items: center;
-    justify-content: center;
     image-rendering: optimizeSpeed;
     background-image: url('../../../../../../public/icon.png');
-    background-size: cover;
+    scale: 1.1;
+    outline: none;
+    border: none;
+    display: inline-block;
+    box-shadow: none;
 }
+
 
 .image-container {
     display: flex;
@@ -26,8 +29,15 @@
     justify-content: start;
     align-items: center;
     margin-left: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    outline: none;
+    border: none;
+    display: inline-flex;
+    box-shadow: none;
+}
+
+.image-container h5 {
+  font-weight: 700;
+  font-size: x-large;
 }
 
 .seccion-container {
@@ -93,9 +103,10 @@
 }
 
 .buttonBar {
-    background-color: #B6F0D3;
+    background-color: transparent;
     border-radius: 8px;
     border: none;
+    font-size: large;
 }
 
 .buttonBar:hover {
@@ -106,16 +117,31 @@
 }
 
 .buttonImportant {
-    width: 150px;
+    width: 200px;
     margin-right: 20px;
     border: none;
     border-radius: 8px;
-    height: 30px;
+    height: 35px;
     background-color: #5B2E7A;
     color: white;
+    font-size: large;
+    font-weight: 600;
 }
 
 .buttonImportant:hover {
     cursor: pointer;
     font-weight: 700;
+}
+
+.buttonBar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
 }

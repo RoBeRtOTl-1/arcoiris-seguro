@@ -1,0 +1,99 @@
+.card-body {
+    padding: 35px;
+}
+
+.progress-bar-container {
+    width: 80%;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 15px;
+    overflow: hidden; /* Muy importante para que el relleno quede dentro */
+    margin: 20px auto;
+
+    background-image: linear-gradient(
+        to right,
+        #00ff22 0px, #00ff22 25%, 
+        
+        #ffc107 26%, #ffc107 50%, 
+
+        #ff8c00 51%, #ff8c00 75%, 
+        
+        #ff0000 76%, #ff0000 100%
+    );
+    
+}
+
+.progress-fill {
+    height: 100%;
+    width: 100%;
+
+    background-color: #eee;
+
+    float: right; 
+
+    background-color: #eee;
+    
+    background-position: left center;
+
+    transition: width 2s ease-out;
+}
+
+.progress-leyenda {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.leyenda-item {
+    flex-grow: 1;
+    width: 25%;
+    padding: 5px;
+    color: #000000;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.item-1 { background-color: #00ff2291; }
+.item-2 { background-color: #ffc10791; }
+.item-3 { background-color: #ff8c0091; }
+.item-4 { background-color: #ff000091; }
+
+
+.card-leyenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.card {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+.card-1 { background-color: #00ff2250; }
+.card-2 { background-color: #ffc10750; }
+.card-3 { background-color: rgba(255, 140, 0, 0.425); }
+.card-4 { background-color: #ff000050; }
+
+.alert-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card-alert {
+    width: 80%;
+    height: 100px;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: large;
+}

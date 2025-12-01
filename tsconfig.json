@@ -7,6 +7,9 @@
       "componentes": [
         "./dist/componentes"
       ],
+      "menus": [
+        "./dist/menus/src/public-api.ts"
+      ],
     },
     "outDir": "./dist/out-tsc",
     "strict": true,

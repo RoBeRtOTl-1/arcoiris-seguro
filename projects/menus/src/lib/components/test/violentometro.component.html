@@ -1,0 +1,81 @@
+<div class="card-body">
+    <div class="card-section">
+        <div class="content-title">
+            <h2>Violentrometro</h2>
+        </div>
+    </div>
+    <div class="body-content">
+        <div class="progress-bar-container" >
+            <div id="progress-bar-fill" class="progress-fill" [style]="styleWidth"></div>
+        </div>
+        <div class="progress-leyenda">
+            <span class="leyenda-item item-1">0 - 25%</span>
+            <span class="leyenda-item item-2">26 - 50%</span>
+            <span class="leyenda-item item-3">51 - 75%</span>
+            <span class="leyenda-item item-4">76 - 100%</span>
+        </div>
+        <div class="card-leyenda">
+            <div class="card card-1">
+                <h5>Relación/entorno “relativamente sano”</h5>
+                <label class="control-label">
+                    Es posible que experimentes desacuerdos normales, 
+                    pero no se observan señales significativasde violencia.
+                    Recomendación: sigue fortaleciendo la comunicación y autocuidado.
+                </label>
+            </div>
+            <div class="card card-2">
+                <h5>Alertas tempranas</h5>
+                <label class="control-label">
+                    Hay comportamientos que pueden convertirse 
+                    en violencia emocional o psicológica si se normalizan.
+                    Recomendación: pon límites, identifica patrones y revisa hábitos de comunicación.
+                </label>
+            </div>
+            <div class="card card-3">
+                <h5>Riesgo moderado de violencia</h5>
+                <label class="control-label">
+                    Varias conductas preocupantes están presentes, y podrías estar viviendo manipulación
+                    emocional, control o invalidación identitaria.
+                    Recomendación: buscar apoyo emocional, leer recursos y considerar tomar distancia.
+                </label>
+            </div>
+            <div class="card card-4">
+                <h5>Alta probabilidad de violencia emocional o psicológica</h5>
+                <label class="control-label">
+                    Tu bienestar puede estar en riesgo.
+                    No estás exagerando. Lo que sientes es válido.
+                    Recomendación: acceder a apoyo profesional, buscar redes seguras y usar la sección de ayuda
+                    inmediata.
+
+                </label>
+            </div>
+        </div>
+        <div class="alert-content">
+            <div class="card-alert card-1" [hidden]="Resultados > 25">
+                <label>
+                    "Tus respuestas indican que no se observan señales fuertes de violencia. Aun así, sigue
+                    cuidando tus límites y mantén una comunicación respetuosa en tus relaciones y espacios
+                    LGBTQ+."
+                </label>
+            </div>
+            <div class="card-alert card-2" [hidden]="Resultados > 50 || Resultados <= 25">
+                <label>
+                    "Detectamos algunas conductas preocupantes. No las ignores. Revisa nuestros recursos y
+                    observa si estas actitudes se repiten con frecuencia."
+                </label>
+            </div>
+            <div class="card-alert card-3" [hidden]="Resultados > 75 || Resultados <= 50">
+                <label>
+                    "Varias de tus respuestas muestran señales claras de violencia emocional o identitaria. Lo que
+                    estás viviendo NO es normal. Te invitamos a revisar recursos y contactar apoyo."
+                </label>
+            </div>
+             <div class="card-alert card-4" [hidden]="Resultados <= 75">
+                <label>
+                    "Lo que estás viviendo es grave. Tus respuestas muestran señales de violencia significativa. No
+                    estás solx. Aquí encontrarás ayuda inmediata y rutas seguras."
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="card-body">
+    <div class="card-section">
+        <div class="content-title">
+            <h2>ERVI-LGBTQ+ - Test de Evaluación de Riesgo y Violencia Intracomunitaria LGBTQ+.</h2>
+        </div>
+    </div>
+    <div class="card-section">
+        <div class="card-info">
+            <h4>Instrucciones:</h4>
+            <label class="control-label">
+                Lee cada frase y selecciona la opción que mejor represente tu situación actual.
+                No hay respuestas correctas o incorrectas.
+                La información es anónima y confidencial.
+            </label>
+        </div>
+        <div class="card-info">
+            <h4>Opciones de respuesta (escala Likert):</h4>
+            <ul>
+                <li>0-Nunca</li>
+                <li>1-Casi nunca</li>
+                <li>2-A veces</li>
+                <li>3-Casi siempre</li>
+                <li>4-Siempre</li> 
+            </ul>
+        </div>
+    </div>
+    <div class="card-section-center">
+        <div class="carrusel-content">
+            <div class="test-content" *ngFor="let cat of categorias; let i = index">
+                <!-- <div *ngIf="i === indexCat"> -->
+                <div [hidden]="i !== indexCat">
+                    <h4>{{cat.Nombre}}</h4>
+                    <div class="test-question" *ngFor="let preg of cat.Preguntas">
+                        <h6>{{preg.Pregunta}}</h6>
+                        <mat-radio-group [(ngModel)]="preg.Resultado" (change)="ValidarProgreso()">
+                            <mat-radio-button *ngFor="let r of preg.Respuestas" [value]="r.Valor">{{r.Nombre}}</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+            <mat-progress-bar mode="determinate" class="progress-bar" [value]="progreso"></mat-progress-bar>
+            <div class="footer-carrusel">
+                <label class="pagination">Pagina {{indexCat + 1}} de {{paginas}}</label>
+                <button [disabled]="!enablePrevious" class="btn btn-primary" (click)="PreviousCat()">Regresar</button>
+                <button [disabled]="!enableNext" class="btn btn-primary" (click)="NextCat()">{{nextButtonName}}</button>
+            </div>
+        </div>
+    </div>
+       
+</div>

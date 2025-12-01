@@ -1,4 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: 'Nunito';
+  src: src('/fonts/Nunito-Regular.woff2') format('woff2'); /* Para archivos .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: src('/fonts/Inter_28pt-Regular.woff2') format('woff2'); /* Para archivos .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: src('/fonts/Poppins-Regular.woff2') format('woff2'); /* Para archivos .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p, label {
+    font-family: 'Inter Regular';
+    font-weight: 100;
+    font-style: normal;
+}
+
+button {
+    font-family: 'Nunito';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.progress-bar.mat-progress-bar .mat-progress-bar-fill::after{
+    background-image: linear-gradient(
+    to right,
+    /* ROJO (0% - 30%) */
+    #f44336 0%,
+    #f44336 30%,
+    
+    /* AMARILLO (31% - 40%) */
+    #ffc107 31%, 
+    #ffc107 40%, 
+    
+    /* VERDE (41% - 100%) */
+    #4CAF50 41%, 
+    #4CAF50 100%
+  ) !important;
+  background-color: transparent !important;
+}
+
+.progress-vertical .mat-progress-bar-background {
+  background-color: #e0e0e0; 
+}
